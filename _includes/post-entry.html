@@ -12,10 +12,24 @@
   </div>
   <div class="post-meta">
     <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    <span class="comments-counter">
-      {% assign comments_num = site.data.comments[post.slug] | size %}
-      <a href="{{ site.baseurl }}{{ post.url }}#comments">💬 {{comments_num}} comment</a>
-    </span>
+
+    <div>
+      📅
+      <span class="date">
+        {{ post.date | date: "%B %e, %Y" }}
+      </span>
+      <span class="comments-counter">
+        {% assign comments_num = site.data.comments[post.slug] | size %}
+        <a href="{{ site.baseurl }}{{ post.url }}#comments">💬 {{comments_num}}</a>
+      </span>
+    </div>
+
+    {% assign sorted_tag = post.tags | sort %}
+    <ul class="tags">
+      {% for tag in sorted_tag %}
+      <li><a href="{{ site.baseurl }}/tags/#{{ tag }}-ref" class="tag">{{ tag }}</a></li>
+      {% endfor %}
+    </ul>
   </div>
 
 </article>

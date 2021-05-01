@@ -5,12 +5,19 @@ layout: default
 <article class="post">
   <h1>{{ page.title }}</h1>
 
-  <div class="entry">
-    {{ content }}
+  <div>
+    📅
+    <span class="date">
+      {{ page.date | date: "%B %e, %Y" }}
+    </span>
+    <span class="comments-counter">
+      {% assign comments_num = site.data.comments[page.slug] | size %}
+      <a href="{{ site.baseurl }}{{ page.url }}#comments">💬 {{comments_num}}</a>
+    </span>
   </div>
 
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
+  <div class="entry">
+    {{ content }}
   </div>
 
   {% assign sorted_tag = page.tags | sort %}
