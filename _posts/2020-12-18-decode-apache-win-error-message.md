@@ -37,7 +37,7 @@ httpd.exe: Syntax error on line 181 of C:/temp/Apache24/conf/httpd.conf: Cannot 
 
 由於客戶的系統環境是中文Windows，常見的編碼不外乎Big5、UTF-7/8/16/32、GB2312。先用Big5[解碼][hex-to-ascii]：
 
-> 找不到指帚獐珩�
+> 找不到指帚獐珩�
 
 不錯的開始，但是堅持到一半就走樣了。仔細看看原始亂碼規律的`\x[0-9a-f]{2}`之中夾雜了不規則的字元`w,C`在裡面，參照ASCII table分別對應到`77,43`試試。
 
