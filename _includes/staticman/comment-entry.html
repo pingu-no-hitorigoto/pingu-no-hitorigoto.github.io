@@ -4,7 +4,7 @@
   <div class="comment__author">
     {{ comment.name }}
     <time class="comment__date" datetime="{{ comment.date | date: '%FT%TZ' }}">
-      <a href="#">{{ comment.date | date: "%m-%d %R %Z" }}</a>
+      <a href="#">{{ comment.date | date: "%F %R %Z" }}</a>
     </time>
   </div>
   <div class="comment__body">
