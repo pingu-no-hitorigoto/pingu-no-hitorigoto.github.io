@@ -1,0 +1,7 @@
+_id: 58616520-282d-11ec-b790-2f54cfc09cde
+name: a
+email: efc7054338c2c3533ca6a6e2aea23a25
+url: ''
+message: "第二題，測資輸入「1;100」\r\n輸出結果會是「FIFTY,FIVE,TWENTY,TWO」(50 + 20 + 5 + 2 = 77)\r\n但答案應是「FIFTY,FIVE,TWENTY,TWENTY,TWO,TWO」(50 + 20 + 20 + 5 + 2 + 2 = 99)"
+replying_to: ''
+date: '2021-10-08T11:46:17.078Z'
