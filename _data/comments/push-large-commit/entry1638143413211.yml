@@ -1,0 +1,10 @@
+_id: ed59bd30-50a5-11ec-9cf0-8bd92433a0ad
+name: Ambertany
+email: 9e2b7890ea4e32f26dfe7aac4905181f
+url: 'https://www.kernel.org/doc/html/latest/admin-guide/reporting-issues.html'
+message: >-
+  This document describes how to use the dynamic debug (dyndbg) feature <a
+  href=https://www.kernel.org/doc/html/latest/admin-guide/dynamic-debug-howto.html>Dynamic
+  debug</a>
+replying_to: ''
+date: '2021-11-28T23:50:13.204Z'
