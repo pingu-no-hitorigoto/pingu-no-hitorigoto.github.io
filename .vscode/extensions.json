@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+		"mhutchie.git-graph",
+		"codezombiech.gitignore",
+		"eamodio.gitlens",
+		"bierner.markdown-yaml-preamble",
+		"davidanson.vscode-markdownlint"
+  ]
+}

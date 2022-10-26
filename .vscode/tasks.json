@@ -14,10 +14,13 @@
   "problemMatcher": [],
   "tasks": [
     {
-      "label": "serve",
+      "label": "jekyll serve",
+      "detail": "Run `jekyll serve` locally",
       "command": [
-        "jekyll serve --host 0.0.0.0",
-        "--force_polling"
+        "bundle exec jekyll serve",
+        "--host 0.0.0.0",
+        "--port 4000",
+        "--force_polling",
       ],
       "group": {
         "kind": "build",
@@ -25,15 +28,29 @@
       }
     },
     {
-      "label": "preview",
+      "label": "jekyll preview",
+      "detail": "Run `jekyll serve` locally with livereload enabled",
       "command": [
-        "jekyll serve --host 0.0.0.0",
+        "bundle exec jekyll serve",
+        "--host 0.0.0.0",
+        "--port 4000",
         "--force_polling",
         "--livereload",
         "--future",
         "--unpublished",
       ],
       "group": "build"
-    }
+    },
+    {
+      "label": "bundle install",
+      "detail": "Run `bundle install` to prepare required package",
+      "command": [
+        "bundle install --path vendor/bundle",
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
   ]
 }
