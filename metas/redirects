@@ -1,0 +1,6 @@
+---
+comment: Cloudflare site redirect config
+layout: none
+permalink: _redirects
+---
+/mail/config-v1.1.xml /.well-known/autoconfig/mail/config-v1.1.xml 301
