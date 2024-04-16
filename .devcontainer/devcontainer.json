@@ -1,27 +1,55 @@
 // For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.128.0/containers/jekyll
 {
-	"dockerFile": "Dockerfile",
-	// Set *default* container specific settings.json values on container create.
-	"settings": {
-		"terminal.integrated.defaultProfile.linux": "bash"
+	"name": "blog-dev",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "workspace",
+	"workspaceFolder": "/workspace",
+	"customizations": {
+		"vscode": {
+			// Set *default* container specific settings.json values on container create.
+			"settings": {
+				"gitlens.defaultDateFormat": "ddd, YYYY/MM/DD, HH:mm:ss",
+				"gitlens.defaultDateShortFormat": "YY/MM/DD HH:mm",
+				"gitlens.defaultTimeFormat": "HH:mm",
+				"gitlens.plusFeatures.enabled": false,
+				"gitlens.showWelcomeOnInstall": false,
+				"gitlens.showWhatsNewAfterUpgrades": false,
+				"terminal.integrated.defaultProfile.linux": "bash",
+				"terminal.integrated.profiles.linux": {
+					"bash": {
+						"path": "/bin/bash"
+					}
+				},
+				"diffEditor.ignoreTrimWhitespace": true,
+				"git.autofetch": true,
+				"git.pullTags": false,
+				"editor.renderWhitespace": "boundary"
+			},
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"bierner.markdown-yaml-preamble",
+				"codezombiech.gitignore",
+				"DavidAnson.vscode-markdownlint",
+				"eamodio.gitlens",
+				"foxundermoon.shell-format",
+				"medo64.render-crlf",
+				"mhutchie.git-graph",
+				"ms-azuretools.vscode-docker",
+				"wmaurer.change-case"
+			]
+		}
 	},
-	// Add the IDs of extensions you want installed when the container is created.
-	"extensions": [
-		"mhutchie.git-graph",
-		"codezombiech.gitignore",
-		"eamodio.gitlens",
-		"bierner.markdown-yaml-preamble",
-		"davidanson.vscode-markdownlint"
-	],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [
-		4000,
-		35729
-	],
+	// "forwardPorts": [4000, 35729],
+	"remoteEnv": {
+		"BUNDLE_PATH": "vendor/bundle"
+	},
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "cd ${input:projectName} && bundle install",
+	"postCreateCommand": {
+		"rubySetup": "bundle install"
+	},
 	// Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
 	// "remoteUser": "vscode",
-	"name": "Jekyll"
+	"updateRemoteUserUID": false
 }

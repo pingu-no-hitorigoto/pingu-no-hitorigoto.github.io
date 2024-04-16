@@ -20,7 +20,7 @@
         "bundle exec jekyll serve",
         "--host 0.0.0.0",
         "--port 4000",
-        "--force_polling",
+        // "--force_polling", // only Windows require
       ],
       "group": {
         "kind": "build",
@@ -34,7 +34,7 @@
         "bundle exec jekyll serve",
         "--host 0.0.0.0",
         "--port 4000",
-        "--force_polling",
+        // "--force_polling", // only Windows require
         "--livereload",
         "--future",
         "--unpublished",
@@ -45,7 +45,7 @@
       "label": "bundle install",
       "detail": "Run `bundle install` to prepare required package",
       "command": [
-        "bundle install --path vendor/bundle",
+        "bundle install",
       ],
       "group": {
         "kind": "build",

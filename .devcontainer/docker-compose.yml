@@ -1,0 +1,8 @@
+version: '3.9'
+services:
+  workspace:
+    image: registry.gitlab.com/pingu8007/devcontainer:latest
+    command: sleep infinity
+    restart: unless-stopped
+    volumes:
+      - ..:/workspace # Problematic on Windows, clone into WSL first

@@ -6,4 +6,5 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 # gem "rails"
 
-gem "github-pages", "~> 215"
+gem "github-pages", "~> 231"
+gem "webrick" # Ruby 3 require explicit declaration
